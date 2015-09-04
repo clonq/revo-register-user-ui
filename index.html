@@ -1,0 +1,110 @@
+<div class="row" id="clonq-register">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 panel login-panel">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>SIGN UP</h2>
+        <br/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <form model="user" request="register" onsuccess="revo:load:clonq/user/confirm">
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input type="text" placeholder="Name" class="form-control name" field="name" value="john"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input type="text" placeholder="Email" class="form-control email" field="email" value="john@test.com"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input type="password" placeholder="Password" class="form-control password" field="password" value="test"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input type="text" placeholder="Invite Code" class="form-control invite-code" field="inviteCode" value="c100"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group text-muted">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"/> Receive our newsletter and other occasional updates 
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <input type="submit" title="sign me up" href="#" class="btn btn-success btn-lg btn-login btn-block btn-signup" value="Sign me up!"/>
+              <div class="h6 text-muted">By signing up, you agree to our <a href="#">terms of use</a> and <a href="#">privacy policy</a></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <br/>
+              <div class="text-strikethru">
+                <div class="line"></div>
+                <div class="text">or</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button type="button" class="btn btn-linkedin btn-lg btn-block" data-toggle="modal" data-target="#linkedin-login-modal">
+                <img src="img/signin-with-linkedin.png" alt="sign in with linkedin">
+              </button>
+            </div>
+          </div>
+          <br/>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal fade" id="linkedin-login-modal" tabindex="-1" role="dialog" aria-labelledby="linkedin-login-title" Sign in with LinkedIn="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h3 class="modal-title" id="linkedin-login-title">Sign in with LinkedIn</h3>
+          </div>
+          <div class="modal-body container">
+            <div class="row">
+              <div class="col-md-12">
+                <form role="form" model="user" request="authenticate">
+                  <input type="hidden" field="strategy" value="linkedin"/>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <input type="text" placeholder="LinkedIn Username" class="username form-control" field="username"/>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <input type="password" placeholder="LinkedIn Password" class="password form-control" field="password"/>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-linkedin linkedin-signin">Sign in</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-muted login_footer">
+      <div class="col-md-12">
+        Have an account? <a href="#" class="login-link">Log in!</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4"></div>
+</div>
